@@ -16,7 +16,9 @@ class PKTAlertView: UIView {
     
     @IBOutlet weak var labelForTitle: UILabel!
     private var blackView : UIView?
-   
+    
+    private var blackButton : UIButton?
+    
     
     private var PRIMARY_COLOR = UIColor(red: 103.0/255.0, green: 58.0/255.0, blue: 183.0/255.0, alpha: 1)
     private var SECONDARY_COLOR = UIColor(red: 96.0/255.0, green: 125.0/255.0, blue: 139.0/255.0, alpha: 1)
@@ -59,16 +61,33 @@ class PKTAlertView: UIView {
         self.circleView.layer.borderWidth = 4.0
         self.circleView.layer.borderColor = PRIMARY_COLOR.CGColor
         
+        
+        if(self.blackButton == nil)
+        {
+            self.blackButton = UIButton(type: .System)
+            self.blackButton!.frame = (UIApplication.sharedApplication().keyWindow?.bounds)!
+            self.blackButton?.alpha = 0.5
+            self.blackButton!.addTarget(self, action: #selector(PKTAlertView.dismiss), forControlEvents: .TouchUpInside)
+            
+            
+            
+        }
+        
+        /*
         if(blackView == nil)
         {
             self.blackView = UIView(frame :  (UIApplication.sharedApplication().keyWindow?.bounds)!);
             self.blackView!.backgroundColor = UIColor.blackColor();
             self.blackView!.alpha = 0.5;//Default
-            let tap = UITapGestureRecognizer(target: self, action: #selector(self.dismiss))
+            let tap = UITapGestureRecognizer()
             
+            tap.addTarget(self, action: #selector(PKTAlertView.dismiss))
+        
             self.blackView!.addGestureRecognizer(tap);
             
-        }
+            
+            
+        }*/
         
         if(self.alertIcon == nil){
             self.imageviewForIcon.hidden = true;
@@ -100,7 +119,7 @@ class PKTAlertView: UIView {
             self.sizeToFit()
             
             
-            UIApplication.sharedApplication().keyWindow?.addSubview(self.blackView!)
+            UIApplication.sharedApplication().keyWindow?.addSubview(self.blackButton!)
             UIApplication.sharedApplication().keyWindow?.addSubview(self);
             self.fadeIn(onCompletion: {
                 
@@ -113,6 +132,18 @@ class PKTAlertView: UIView {
         self.circleView.layer.borderWidth = 2.0
         self.circleView.layer.borderColor = PRIMARY_COLOR.CGColor
         
+        if(self.blackButton == nil)
+        {
+            self.blackButton = UIButton(type: .System)
+            self.blackButton!.frame = (UIApplication.sharedApplication().keyWindow?.bounds)!
+            self.blackButton?.alpha = 0.5
+            self.blackButton!.addTarget(self, action: #selector(PKTAlertView.dismiss), forControlEvents: .TouchUpInside)
+            
+            
+            
+        }
+        
+        /*
         if(blackView == nil)
         {
             self.blackView = UIView(frame :  (UIApplication.sharedApplication().keyWindow?.bounds)!);
@@ -122,7 +153,7 @@ class PKTAlertView: UIView {
             
             self.blackView!.addGestureRecognizer(tap);
             
-        }
+        }*/
         
         self.buttonSuccess.layer.cornerRadius = self.buttonSuccess.frame.size.height/2;
         
@@ -133,7 +164,7 @@ class PKTAlertView: UIView {
         
         dispatch_async(dispatch_get_main_queue()) {
             self.alpha = 0;
-            UIApplication.sharedApplication().keyWindow?.addSubview(self.blackView!)
+            UIApplication.sharedApplication().keyWindow?.addSubview(self.blackButton!)
             UIApplication.sharedApplication().keyWindow?.addSubview(self);
             self.fadeInEaseIn(onCompletion: {
                 
@@ -166,7 +197,7 @@ class PKTAlertView: UIView {
             callback ()
         }
     }
-    
+    /*
     func setBackColor(color: UIColor) -> Void {
         if(blackView == nil)
         {
@@ -182,12 +213,12 @@ class PKTAlertView: UIView {
         {
             self.blackView = UIView(frame :  (UIApplication.sharedApplication().keyWindow?.bounds)!);
             self.blackView!.backgroundColor = UIColor.blackColor()
-            let tap = UITapGestureRecognizer(target: self, action: #selector(self.dismiss))
+            let tap = UITapGestureRecognizer(target: self, action: #selector(self.dismiss));
             self.blackView!.addGestureRecognizer(tap);
         }
         
         self.blackView!.alpha = value;
-    }
+    }*/
     @IBAction func dismissView(sender: AnyObject) {
         self.dismiss();
     }
