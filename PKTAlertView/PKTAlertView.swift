@@ -67,7 +67,7 @@ class PKTAlertView: UIView {
             self.blackButton = UIButton(type: .System)
             self.blackButton!.frame = (UIApplication.sharedApplication().keyWindow?.bounds)!
             self.blackButton?.alpha = 0.5
-            self.blackButton!.addTarget(self, action: #selector(PKTAlertView.dismiss), forControlEvents: .TouchUpInside)
+            self.blackButton!.addTarget(self, action: "dismiss", forControlEvents: .TouchUpInside)
             
             
             
@@ -81,7 +81,7 @@ class PKTAlertView: UIView {
             self.blackView!.alpha = 0.5;//Default
             let tap = UITapGestureRecognizer()
             
-            tap.addTarget(self, action: #selector(PKTAlertView.dismiss))
+            tap.addTarget(self, action: "dismiss")
         
             self.blackView!.addGestureRecognizer(tap);
             
@@ -137,7 +137,7 @@ class PKTAlertView: UIView {
             self.blackButton = UIButton(type: .System)
             self.blackButton!.frame = (UIApplication.sharedApplication().keyWindow?.bounds)!
             self.blackButton?.alpha = 0.5
-            self.blackButton!.addTarget(self, action: #selector(PKTAlertView.dismiss), forControlEvents: .TouchUpInside)
+            self.blackButton!.addTarget(self, action: "dismiss", forControlEvents: .TouchUpInside)
             
             
             
