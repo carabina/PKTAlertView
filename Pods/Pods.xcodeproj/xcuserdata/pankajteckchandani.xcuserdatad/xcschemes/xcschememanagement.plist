@@ -4,6 +4,11 @@
 <dict>
 	<key>SchemeUserState</key>
 	<dict>
+		<key>BetterBaseClasses.xcscheme</key>
+		<dict>
+			<key>isShown</key>
+			<false/>
+		</dict>
 		<key>Pods-PKTAlertView.xcscheme</key>
 		<dict>
 			<key>isShown</key>
@@ -17,12 +22,17 @@
 	</dict>
 	<key>SuppressBuildableAutocreation</key>
 	<dict>
-		<key>6C0F62511E10F94914C6497C6B0F4420</key>
+		<key>17397675D970AADCEB6BA59A823EFE12</key>
 		<dict>
 			<key>primary</key>
 			<true/>
 		</dict>
-		<key>AF7BFE636B8C6F5979AFA24F6FCB7577</key>
+		<key>58D96BEDFF60538E5B2CCA00CB445A30</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>9FE5E8E8C76D4F34F6E68EBBBDCE1A45</key>
 		<dict>
 			<key>primary</key>
 			<true/>

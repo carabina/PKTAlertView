@@ -1,3 +1,22 @@
-PODFILE CHECKSUM: d598187b64c71490734c68a646374eef1d6d76d1
+PODS:
+  - BetterBaseClasses (1.15.1):
+    - BetterBaseClasses/Categories (= 1.15.1)
+    - BetterBaseClasses/Constants (= 1.15.1)
+    - BetterBaseClasses/Controllers (= 1.15.1)
+    - BetterBaseClasses/Views (= 1.15.1)
+  - BetterBaseClasses/Categories (1.15.1)
+  - BetterBaseClasses/Constants (1.15.1)
+  - BetterBaseClasses/Controllers (1.15.1):
+    - BetterBaseClasses/Categories
+    - BetterBaseClasses/Constants
+  - BetterBaseClasses/Views (1.15.1)
 
-COCOAPODS: 1.0.1
+DEPENDENCIES:
+  - BetterBaseClasses (~> 1.0)
+
+SPEC CHECKSUMS:
+  BetterBaseClasses: b424525f3ed684ee0779c84b6c404386c1c3fd2e
+
+PODFILE CHECKSUM: 46b617d967ed781804ec0e485aba4d7afd0918cb
+
+COCOAPODS: 1.2.1

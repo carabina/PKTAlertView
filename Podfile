@@ -7,6 +7,8 @@ target 'PKTAlertView' do
 
   # Pods for PKTAlertView
 
+pod 'BetterBaseClasses', '~> 1.0'
+
   target 'PKTAlertViewTests' do
     inherit! :search_paths
     # Pods for testing

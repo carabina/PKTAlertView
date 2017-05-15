@@ -7,8 +7,9 @@
 //
 
 import UIKit
+import BetterBaseClasses
 
-class PKTAlertView: UIView {
+class PKTAlertView: BaseView {
     var onCancelClick: (() -> Void)?
     var onOkayClick: (() -> Void)?
     var onCompletion: (() -> Void)?

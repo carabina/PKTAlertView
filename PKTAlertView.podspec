@@ -7,7 +7,7 @@ s.name = "PKTAlertView"
 s.summary = "PKTAlertView lets a user display a highly attractive and customizable alert view"
 s.requires_arc = true
 
-s.version = "0.2.0"
+s.version = "0.4.0"
 
 s.license = { :type => "MIT", :file => "LICENSE" }
 
@@ -20,6 +20,7 @@ s.source = { :git => "https://github.com/teckism/PKTAlertView.git", :tag => "#{s
 
 s.framework = "UIKit"
 s.source_files = "PKTAlertView/**/*.{swift,xib,h,m}"
+s.dependency 'BetterBaseClasses', '~> 1.0'
 
 s.resources = "PKTAlertView/**/*.{xib}"
 end
